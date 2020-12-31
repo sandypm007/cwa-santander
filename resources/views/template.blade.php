@@ -37,13 +37,13 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="{{ route('homepage') }}" class="nav-link">Inicio</a></li>
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="{{ request()->is('/') ? '#new' : route('homepage') }}" class="nav-link">Inicio</a></li>
                 <li class="nav-item"><a href="#new1" class="nav-link">Evento</a></li>
                 <li class="nav-item"><a href="#new2" class="nav-link">Presentadores</a></li>
                 <li class="nav-item"><a href="#new3" class="nav-link">Kick Off BEI 2021</a></li>
                 <li class="nav-item"><a href="#new4" class="nav-link">Contacto</a></li>
                 @if (auth()->user()->acl_level === 100)
-                    <li class="nav-item"><a href="{{ route('chat') }}" class="nav-link">Chat</a></li>
+                    <li class="nav-item {{ request()->is('chat') ? 'active' : '' }}"><a href="{{ route('chat') }}" class="nav-link">Chat</a></li>
                 @endif
                 <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Salir</a></li>
             </ul>

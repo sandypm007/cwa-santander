@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="chat-container">
         <h3 class="text-center">{{ trans('messages.template.messaging') }}</h3>
         <div class="messaging">
             <div class="inbox_msg">
