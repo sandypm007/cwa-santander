@@ -602,7 +602,6 @@
 </div>
 <div class="btn-opc2">
     <img class="img-opc" src="{{ url('public/images/icons/respuesta.svg') }}" alt="">
-
 </div>
 
 <footer class="ftco-footer ftco-section">
@@ -686,7 +685,7 @@
 </div>
 
 
-<div class="chat-popup" id="myForm">
+<div class="chat-popup" id="chat-popup">
     <form action="/receiver_sync.php" class="form-container">
         <div class="chat-container">
             <div class="chat-message">
@@ -709,13 +708,9 @@
             <button type="submit" class="btn"><i class="fa fa-paper-plane"></i></button>
         </div>
     </form>
-
-    <div class="alert alert-success" style="display: none;">
-        <strong>Gracias por comunicarse!</strong> Hemos registrado su pregunta.
-    </div>
 </div>
 
-<div class="response-popup" id="responses-topup">
+<div class="response-popup" id="response-popup">
     <form action="/receiver_sync.php" class="form-container">
         <div class="response-container">
             <h4>Respuestas</h4>
