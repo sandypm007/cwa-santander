@@ -249,6 +249,9 @@
         evt.stopPropagation();
 
         $chatPopup.toggle();
+        $chatPopup.find('.chat-container').stop().animate({
+            scrollTop: $chatPopup.find('.chat-container').get(0).scrollHeight
+        }, 800);
     });
 
     $('.btn-opc2').on('click', function (evt) {

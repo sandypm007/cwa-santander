@@ -686,28 +686,28 @@
 
 
 <div class="chat-popup" id="chat-popup">
-    <form action="/receiver_sync.php" class="form-container">
-        <div class="chat-container">
-            <div class="chat-message">
-                <p>Hola. En que podemos asistirle?</p>
-                <span class="time-right">11:00</span>
-            </div>
-
-            <div class="chat-message darker">
-                <p>Necesito información sobre el descuento sobre los viajes a marte!</p>
-                <span class="time-left">11:01</span>
-            </div>
-
-            <div class="chat-message">
-                <p>Excelente, puedo enviarle por correo electrónico los detalles con todas las opciones?</p>
-                <span class="time-right">11:02</span>
-            </div>
+    <div class="chat-container">
+        <div class="chat-message">
+            <p>Hola. En que podemos asistirle?</p>
+            <span class="time-right">11:00</span>
         </div>
-        <div class="mt-1 chat-control">
+
+        <div class="chat-message darker">
+            <p>Necesito información sobre el descuento sobre los viajes a marte!</p>
+            <span class="time-left">11:01</span>
+        </div>
+
+        <div class="chat-message">
+            <p>Excelente, puedo enviarle por correo electrónico los detalles con todas las opciones?</p>
+            <span class="time-right">11:02</span>
+        </div>
+    </div>
+    <div class="mt-1 chat-control">
+        <form action="/receiver_sync.php" class="form-container">
             <input placeholder="Ingrese su mensaje.." name="message" required></textarea>
             <button type="submit" class="btn"><i class="fa fa-paper-plane"></i></button>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <div class="response-popup" id="response-popup">
