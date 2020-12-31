@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="{{ url('public/css/chat.css') }}">
 @endsection
 
+@section('javascripts')
+    <script src="{{ url('public/js/chat.js') }}"></script>
+@endsection
+
 @section('content')
     <div class="chat-container">
         <h3 class="text-center">{{ trans('messages.template.messaging') }}</h3>
@@ -76,7 +80,7 @@
                     </div>
                 </div>
                 <div class="mesgs">
-                    <div class="msg_history">
+                    <div class="msg_history" id="chat-screen" data-sync="{{ route('chat_messages') }}" data-from="0">
                         <div class="incoming_msg">
                             <div class="received_msg">
                                 <div class="received_withd_msg">

@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 /**
  * Class User
  * @package App\Models
+ * @property integer $id
  * @property string $fullname
  * @property string $email
  * @property string $password
@@ -50,4 +51,14 @@ class User extends Authenticatable
         'created_at' => 'datetime:U',
         'updated_at' => 'datetime:U',
     ];
+
+    public function sentMessages()
+    {
+        return $this->hasMany(Message::class, 'from_user_id');
+    }
+
+    public function receivedMessages()
+    {
+        return $this->hasMany(Message::class, 'to_user_id');
+    }
 }

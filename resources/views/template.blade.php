@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ url('public/css/animate.css') }}">
-    <link rel="shortcut icon" href="images/Santander.svg" title="Favicon"/>
+    <link rel="shortcut icon" href="{{ url('public/images/Santander.svg') }}" title="Favicon"/>
 
     <link rel="stylesheet" href="{{ url('public/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ url('public/css/owl.theme.default.min.css') }}">
@@ -138,6 +138,6 @@
 <script src="{{ url('public/js/scrollax.min.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="{{ url('public/js/google-map.js') }}"></script>
-<script src="{{ url('public/js/main.js') }}"></script>
+@yield('javascripts')
 </body>
 </html>

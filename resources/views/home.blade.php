@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('javascripts')
+    <script src="{{ url('public/js/main.js') }}"></script>
+@endsection
+
 @section('content')
     <div class="nomove">
         <section class="hero-wrap degree-right js-fullheight" id="new">
