@@ -20,4 +20,6 @@ Route::get('/_logout', ['as' => 'logout', 'uses' => 'LoginController@logout']);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', ['as' => 'homepage', 'uses' => 'HomeController@index']);
+    Route::get('/message', ['as' => 'read_messages', 'uses' => 'MessageController@list']);
+    Route::post('/message', ['as' => 'send_message', 'uses' => 'MessageController@handle'])->withoutMiddleware(['csrf']);
 });

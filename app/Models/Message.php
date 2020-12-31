@@ -5,6 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Class Message
+ * @package App\Models
+ * @property string $message
+ * @property string $from_user_id
+ * @property string $to_user_id
+ */
 class Message extends Model
 {
     use SoftDeletes;
@@ -43,4 +50,11 @@ class Message extends Model
         'created_at' => 'datetime:U',
         'updated_at' => 'datetime:U',
     ];
+
+    public function toArray()
+    {
+        $base = parent::toArray();
+        $base['formatted_date'] = \DateTime::createFromFormat('U', $base['created_at'])->format('g:i A');
+        return $base;
+    }
 }

@@ -593,16 +593,17 @@
                 <h2 class="mb-4">Contacto</h2>
             </div>
         </div>
-
-
     </div>
 </section>
+
+@if (auth()->user()->acl_level < 100)
 <div class="btn-opc">
     <img class="img-opc" src="{{ url('public/images/icons/conversacion.svg') }}" alt="">
 </div>
-<div class="btn-opc2">
+<div class="btn-opc2 d-none">
     <img class="img-opc" src="{{ url('public/images/icons/respuesta.svg') }}" alt="">
 </div>
+@endif
 
 <footer class="ftco-footer ftco-section">
     <div class="container">
@@ -684,26 +685,14 @@
     </svg>
 </div>
 
-
-<div class="chat-popup" id="chat-popup">
-    <div class="chat-container">
-        <div class="chat-message">
-            <p>Hola. En que podemos asistirle?</p>
-            <span class="time-right">11:00</span>
-        </div>
-
-        <div class="chat-message darker">
-            <p>Necesito información sobre el descuento sobre los viajes a marte!</p>
-            <span class="time-left">11:01</span>
-        </div>
-
-        <div class="chat-message">
-            <p>Excelente, puedo enviarle por correo electrónico los detalles con todas las opciones?</p>
-            <span class="time-right">11:02</span>
-        </div>
-    </div>
+@if (auth()->user()->acl_level < 100)
+<div class="chat-popup" id="chat-popup" data-sync="{{ route('read_messages') }}" data-sender="{{ auth()->user()->id }}" data-from="0" data-to="{{ date('U') }}">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="chat-container"></div>
     <div class="mt-1 chat-control">
-        <form action="/receiver_sync.php" class="form-container">
+        <form action="{{ route('send_message') }}" class="form-container">
             <input placeholder="Ingrese su mensaje.." name="message" required></textarea>
             <button type="submit" class="btn"><i class="fa fa-paper-plane"></i></button>
         </form>
@@ -711,6 +700,9 @@
 </div>
 
 <div class="response-popup" id="response-popup">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
     <form action="/receiver_sync.php" class="form-container">
         <div class="response-container">
             <h4>Respuestas</h4>
@@ -799,6 +791,7 @@
         <strong>Gracias por comunicarse!</strong> Hemos registrado su pregunta.
     </div>
 </div>
+@endif
 
 <script src="{{ url('public/js/jquery.min.js') }}"></script>
 <script src="{{ url('public/js/jquery-migrate-3.0.1.min.js') }}"></script>

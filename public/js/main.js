@@ -245,19 +245,25 @@
 
     const $responsePopup = $('#response-popup');
     const $chatPopup = $('#chat-popup');
-    $('.btn-opc').on('click', function (evt) {
-        evt.stopPropagation();
-
-        $chatPopup.toggle();
+    $chatPopup.on('scroll', function () {
         $chatPopup.find('.chat-container').stop().animate({
             scrollTop: $chatPopup.find('.chat-container').get(0).scrollHeight
         }, 800);
+    });
+
+    $('.btn-opc, .chat-popup .close').on('click', function (evt) {
+        evt.stopPropagation();
+
+        $chatPopup.toggle();
+        $responsePopup.hide();
+        $chatPopup.trigger('scroll');
     });
 
     $('.btn-opc2').on('click', function (evt) {
         evt.stopPropagation();
 
         $responsePopup.toggle();
+        $chatPopup.hide();
     });
 
     $(document.body).on('click', function (evt) {
@@ -266,4 +272,62 @@
         }
         $responsePopup.hide();
     });
+
+    $chatPopup.data('bottom', true);
+    $chatPopup.find('.chat-container').on('scroll', function (e) {
+        var elem = $(e.currentTarget);
+        $chatPopup.data('bottom', elem[0].scrollHeight - elem.scrollTop() === elem.outerHeight());
+    });
+
+    const base = '<div class="chat-message"><p>/text/</p><span class="time-right">/date/</span></div>';
+    let timeout = null;
+    $chatPopup.on('sync', function () {
+        $.ajax({
+            "async": true,
+            "url": $chatPopup.data('sync'),
+            "method": "GET",
+            "data": {
+                "from": $chatPopup.data('from'),
+            }
+        }).done(function (data) {
+            for (const i in data.entries) {
+                var $message = $(base.replace(/\/text\//, data.entries[i].message).replace(/\/date\//, data.entries[i].formatted_date));
+                if (parseInt(data.entries[i].to_user_id) === parseInt($chatPopup.data('sender'))) {
+                    $message.addClass('mine');
+                }
+                $chatPopup.find('.chat-container').append($message);
+            }
+
+            if ($chatPopup.data('bottom') && data.entries.length > 0) {
+                $chatPopup.trigger('scroll');
+            }
+
+            $chatPopup.data('from', data.to);
+            timeout = setTimeout(function () {
+                $chatPopup.trigger('sync');
+            }, 10000);
+        });
+    });
+
+    $chatPopup.find('form').submit(function (evt) {
+        evt.preventDefault();
+        $chatPopup.find('form button').prop('disabled', true).find('i').addClass('fa-spin');
+        $.ajax({
+            "async": true,
+            "url": $(this).prop('action'),
+            "method": "POST",
+            "data": $(this).serialize(),
+        }).done(function (data) {
+            console.log(data);
+            clearTimeout(timeout);
+            $chatPopup.trigger('sync');
+        }).always(function () {
+            $chatPopup.find('form input').val('').focus();
+            $chatPopup.find('form button').prop('disabled', false).find('i').removeClass('fa-spin');
+        });
+    });
+
+    timeout = setTimeout(function () {
+        $chatPopup.trigger('sync');
+    }, 1000);
 })(jQuery);

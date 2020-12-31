@@ -14352,6 +14352,14 @@ textarea.form-control {
     margin: 20px;
 }
 
+.chat-popup {
+    padding-top: 40px;
+}
+
+.chat-popup .close {
+    margin-top: -40px;
+}
+
 .chat-popup .form-container {
     background-color: #3b3c3e;
 }
@@ -14420,7 +14428,7 @@ textarea.form-control {
     color: #000000;
 }
 
-.chat-popup .chat-container .darker {
+.chat-popup .chat-container .mine {
     border: 2px solid #f34423;
     background-color: #f34423;
     margin-left: 5%;

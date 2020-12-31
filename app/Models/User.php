@@ -6,10 +6,22 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * Class User
+ * @package App\Models
+ * @property string $fullname
+ * @property string $email
+ * @property string $password
+ * @property integer $acl_level
+ * @property boolean $active
+ */
 class User extends Authenticatable
 {
     use Notifiable;
     use SoftDeletes;
+
+    const USER = 0;
+    const MANAGER = 100;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +29,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'fullname', 'email', 'password', 'active',
+        'fullname', 'email', 'password', 'acl_level', 'active',
     ];
 
     /**
