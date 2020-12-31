@@ -12,4 +12,8 @@ return [
         'password' => 'La contraseña no es correcta.',
         'not_login' => 'La combinación de correo electrónico / contraseña no es válida.',
     ],
+    'template' => [
+        'messaging' => 'Mensajería',
+        'customers' => 'Clientes',
+    ],
 ];

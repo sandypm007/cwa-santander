@@ -12,4 +12,8 @@ return [
         'password' => 'The password is not valid.',
         'not_login' => 'The email / password combination is not valid.',
     ],
+    'template' => [
+        'messaging' => 'Messaging',
+        'customers' => 'Customers',
+    ],
 ];
