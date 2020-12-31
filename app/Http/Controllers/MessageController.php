@@ -76,7 +76,8 @@ class MessageController extends Controller
             ->orderBy('created_at', 'ASC')
             ->orderBy('id', 'ASC')
             ->get();
+        $messages = $messages->toArray();
 
-        return $this->responseSuccess(null, ['to' => date('U'), 'entries' => $messages->toArray()]);
+        return $this->responseSuccess(null, ['to' => count($messages) > 0 ? $messages[count($messages) - 1]['created_at'] + 1 : date('U'), 'entries' => $messages]);
     }
 }

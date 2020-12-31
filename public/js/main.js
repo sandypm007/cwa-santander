@@ -292,7 +292,7 @@
         }).done(function (data) {
             for (const i in data.entries) {
                 var $message = $(base.replace(/\/text\//, data.entries[i].message).replace(/\/date\//, data.entries[i].formatted_date));
-                if (parseInt(data.entries[i].to_user_id) === parseInt($chatPopup.data('sender'))) {
+                if (parseInt(data.entries[i].from_user_id) === parseInt($chatPopup.data('sender'))) {
                     $message.addClass('mine');
                 }
                 $chatPopup.find('.chat-container').append($message);

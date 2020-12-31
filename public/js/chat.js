@@ -1,13 +1,56 @@
 (function ($) {
     let timeout = null;
     const $chatScreen = $('#chat-screen');
+    const $usersScreen = $('#chat-users');
+    const $form = $('form[name="messaging"]');
 
     $chatScreen.data('bottom', true);
-    $chatScreen.find('.chat-container').on('scroll', function (e) {
-        var elem = $(e.currentTarget);
+    $chatScreen.on('scroll', function (e) {
+        const elem = $(e.currentTarget);
         $chatScreen.data('bottom', elem[0].scrollHeight - elem.scrollTop() === elem.outerHeight());
     });
 
+    $chatScreen.parent().on('scroll', function () {
+        $chatScreen.stop().animate({
+            scrollTop: $chatScreen.get(0).scrollHeight
+        }, 800);
+    });
+
+    const chat_user = '<div class="chat_list" data-id="/id/" data-from="0"><div class="chat_people"><div class="chat_ib"><h5>/username/ <span class="chat_date">/date/</span></h5></div></div></div>';
+    $usersScreen.on('sync', function () {
+        $.ajax({
+            "async": true,
+            "url": $usersScreen.data('sync'),
+            "method": "GET",
+            "data": {
+                "from": $usersScreen.data('from'),
+            }
+        }).done(function (data) {
+            for (const i in data.entries) {
+                if ($usersScreen.find('[data-id="' + data.entries[i].id + '"]').length === 0) {
+                    let html = chat_user.replace(/\/id\//, data.entries[i].id).replace(/\/username\//, data.entries[i].fullname);
+                    let date = '-';
+                    if (data.entries[i].last_message) {
+                        date = data.entries[i].last_message.formatted_date;
+                    }
+                    html = html.replace(/\/date\//, date);
+                    $usersScreen.append(html);
+                }
+                const $users = $usersScreen.find('.chat_list.active_chat');
+                if ($users.length === 0 && data.entries.length > 0) {
+                    $usersScreen.find('.chat_list').get(0).click();
+                } else {
+                    $users.get(0).click();
+                }
+            }
+
+            timeout = setTimeout(function () {
+                $usersScreen.trigger('sync');
+            }, 10000);
+        });
+    });
+
+    const chat_message = '<div class="message"><p>/text/</p><span class="time_date">/date/</span></div>';
     $chatScreen.on('sync', function () {
         $.ajax({
             "async": true,
@@ -15,24 +58,57 @@
             "method": "GET",
             "data": {
                 "from": $chatScreen.data('from'),
+                "target": $chatScreen.data('target'),
             }
         }).done(function (data) {
             for (const i in data.entries) {
-                console.log(data.entries[i]);
+                const $message = $(chat_message.replace(/\/text\//, data.entries[i].message).replace(/\/date\//, data.entries[i].formatted_date));
+                $message.addClass(parseInt($chatScreen.data('target')) === parseInt(data.entries[i].from_user_id) ? 'incoming_msg' : 'outgoing_msg');
+                $chatScreen.append($message);
             }
 
             if ($chatScreen.data('bottom') && data.entries.length > 0) {
-                $chatScreen.trigger('scroll');
+                $chatScreen.parent().trigger('scroll');
             }
 
+            $usersScreen.find('[data-id="' + $chatScreen.data('target') + '"]').data('from', data.to);
             $chatScreen.data('from', data.to);
-            // timeout = setTimeout(function () {
-            //     $chatScreen.trigger('sync');
-            // }, 10000);
+
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                $usersScreen.trigger('sync');
+            }, 10000);
         });
     });
 
-    timeout = setTimeout(function () {
+    $form.submit(function (evt) {
+        evt.preventDefault();
+        $form.find('button').prop('disabled', true).find('i').addClass('fa-spin');
+        $.ajax({
+            "async": true,
+            "url": $(this).prop('action'),
+            "method": "POST",
+            "data": $(this).serialize(),
+        }).done(function (data) {
+            console.log(data);
+            clearTimeout(timeout);
+            $chatScreen.trigger('sync');
+        }).always(function () {
+            $form.find('input').val('').focus();
+            $form.find('button').prop('disabled', false).find('i').removeClass('fa-spin');
+        });
+    });
+
+    $(document.body).on('click', '.chat_list', function () {
+        $(this).siblings().removeClass('active_chat');
+        $(this).addClass('active_chat');
+        $chatScreen.data('from', $(this).data('from'));
+        $chatScreen.data('target', $(this).data('id'));
+        $form.find('input[name="target"]').val($(this).data('id'));
         $chatScreen.trigger('sync');
+    });
+
+    timeout = setTimeout(function () {
+        $usersScreen.trigger('sync');
     }, 1000);
 })(jQuery);

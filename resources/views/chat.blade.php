@@ -27,97 +27,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="inbox_chat">
-                        <div class="chat_list active_chat">
-                            <div class="chat_people">
-                                <div class="chat_ib">
-                                    <h5>User Sender <span class="chat_date">Dec 25</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_ib">
-                                    <h5>User Sender <span class="chat_date">Dec 25</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_ib">
-                                    <h5>User Sender <span class="chat_date">Dec 25</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_ib">
-                                    <h5>User Sender <span class="chat_date">Dec 25</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_ib">
-                                    <h5>User Sender <span class="chat_date">Dec 25</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_ib">
-                                    <h5>User Sender <span class="chat_date">Dec 25</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_ib">
-                                    <h5>User Sender <span class="chat_date">Dec 25</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="inbox_chat" id="chat-users" data-from="0" data-sync="{{ route('chat_users') }}"></div>
                 </div>
                 <div class="mesgs">
-                    <div class="msg_history" id="chat-screen" data-sync="{{ route('chat_messages') }}" data-from="0">
-                        <div class="incoming_msg">
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                    <p>This is just a mockup of how chat manager side will looks like.</p>
-                                    <span class="time_date"> 11:01 AM |Dec 31</span></div>
-                            </div>
-                        </div>
-                        <div class="outgoing_msg">
-                            <div class="sent_msg">
-                                <p>This is just a mockup of how chat manager side will looks like.</p>
-                                <span class="time_date"> 11:01 AM |Dec 31</span></div>
-                        </div>
-                        <div class="incoming_msg">
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                    <p>I'll respond to your message</p>
-                                    <span class="time_date"> 11:01 AM | Dec 31</span></div>
-                            </div>
-                        </div>
-                        <div class="outgoing_msg">
-                            <div class="sent_msg">
-                                <p>Do not test my patience!</p>
-                                <span class="time_date"> 11:01 AM | Dec 31</span></div>
-                        </div>
-                        <div class="incoming_msg">
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                    <p>Still need to apply sync to this code.</p>
-                                    <span class="time_date"> 11:01 AM | Dec 31</span></div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="msg_history" id="chat-screen" data-sync="{{ route('chat_messages') }}" data-from="0"></div>
                     <div class="type_msg">
-                        <div class="input_msg_write">
-                            <input type="text" class="write_msg" placeholder="Type a message"/>
-                            <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-                        </div>
+                        <form name="messaging" action="{{ route('post_message') }}" action="#" method="post">
+                            <div class="input_msg_write">
+                                <input type="text" class="write_msg" name="message" placeholder="Type a message"/>
+                                <input type="hidden" name="target" placeholder="Type a message"/>
+                                <button class="msg_send_btn" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

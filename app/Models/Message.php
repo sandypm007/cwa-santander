@@ -73,7 +73,8 @@ class Message extends Model
     public function toArray()
     {
         $base = parent::toArray();
-        $base['formatted_date'] = \DateTime::createFromFormat('U', $base['created_at'])->format('g:i A');
+        $date = \DateTime::createFromFormat('U', $base['created_at']);
+        $base['formatted_date'] = $date ? $date->format('g:i A | d/m') : null;
         return $base;
     }
 }

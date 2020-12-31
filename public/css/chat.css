@@ -104,6 +104,7 @@ img {
 }
 
 .chat_list {
+    cursor: pointer;
     border-bottom: 1px solid #c4c4c4;
     margin: 0;
     padding: 18px 16px 10px;
@@ -118,26 +119,21 @@ img {
     background: #ebebeb;
 }
 
-.incoming_msg_img {
-    display: inline-block;
-    width: 6%;
-}
-
-.received_msg {
-    display: inline-block;
-    padding: 0 0 0 10px;
-    vertical-align: top;
-    width: 92%;
-}
-
-.received_withd_msg p {
+.message {
+    width: 60%;
     background: #ebebeb none repeat scroll 0 0;
     border-radius: 3px;
-    color: #646464;
-    font-size: 14px;
-    margin: 0;
     padding: 5px 10px 5px 12px;
-    width: 100%;
+    color: #646464;
+    font-size: 1.0rem;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.message.outgoing_msg {
+    background-color: #f34423;
+    color: white;
+    float: right;
 }
 
 .time_date {
@@ -147,34 +143,14 @@ img {
     margin: 8px 0 0;
 }
 
-.received_withd_msg {
-    width: 65%;
+.message.outgoing_msg .time_date {
+    color: whitesmoke;
 }
 
 .mesgs {
     float: left;
     padding: 30px 15px 0 25px;
     width: 70%;
-}
-
-.sent_msg p {
-    background: #f34423 none repeat scroll 0 0;
-    border-radius: 3px;
-    font-size: 14px;
-    margin: 0;
-    color: #fff;
-    padding: 5px 10px 5px 12px;
-    width: 100%;
-}
-
-.outgoing_msg {
-    overflow: hidden;
-    margin: 26px 0 26px;
-}
-
-.sent_msg {
-    float: right;
-    width: 65%;
 }
 
 .input_msg_write input {
