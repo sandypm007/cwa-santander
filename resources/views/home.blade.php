@@ -41,6 +41,7 @@
                 <li class="nav-item"><a href="#new2" class="nav-link">Presentadores</a></li>
                 <li class="nav-item"><a href="#new3" class="nav-link">Kick Off BEI 2021</a></li>
                 <li class="nav-item"><a href="#new4" class="nav-link">Contacto</a></li>
+                <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Salir</a></li>
             </ul>
         </div>
     </div>
