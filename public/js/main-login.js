@@ -81,14 +81,18 @@
 
     });
 
+    const $fields = $('input');
+    $fields.focus();
+    $($fields[0]).focus();
+
     $('form').submit(function (evt) {
         evt.preventDefault();
 
         let $form = $(this);
         const $button = $form.find('button[type="submit"]');
         $button.data('html', $button.html()).html('<i class="fa fa-spinner fa-spin"></i>').prop('disable', true);
-        $.post('', $form.serialize(), function () {
-            document.location.href = '';
+        $.post('', $form.serialize(), function (data) {
+            document.location.href = data.continue_to;
         })
             .fail(function (data) {
                 const response = data.responseJSON;

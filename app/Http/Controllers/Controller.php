@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Support\MessageBag;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Contracts\Support\MessageBag;
 
 class Controller extends BaseController
 {
@@ -16,17 +16,22 @@ class Controller extends BaseController
 
     /**
      * Returns a success response using json.
-     * @param array $data
      * @param string|null $message
+     * @param array $data
      * @param integer $code
      * @return JsonResponse
      */
-    protected function responseSuccess(array $data = [], string $message = null, int $code = 200): JsonResponse
+    protected function responseSuccess(string $message = null, array $data = [], int $code = 200): JsonResponse
     {
         if ($message) {
             $data['message'] = $message;
         }
-        return response()->json($data, $code);
+
+        if (!empty($data)) {
+            $data['success'] = true;
+        }
+
+        return response()->json($data, empty($data) && $code === 200 ? 204 : $code);
     }
 
     /**

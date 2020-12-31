@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\View\View;
 
-class DashboardController extends Controller
+class HomeController extends Controller
 {
     /**
      * @return View
      */
     public function index(): View
     {
-        return view('dashboard');
+        return view('home');
     }
 }

@@ -26,7 +26,7 @@
 					<i class=""> <img src="{{ url('public/images/Santanderrojo.svg') }}" alt=""></i>
 				</span>
                 <div class="wrap-input100 validate-input" data-validate="Ingresar correo valido">
-                    <input class="input100" type="text" name="email">
+                    <input class="input100" type="text" name="email" value="manager@santander.cwa">
                     <span class="focus-input100" data-placeholder="Email"></span>
                 </div>
 
@@ -34,7 +34,7 @@
 					<span class="btn-show-pass">
 						<i class="zmdi zmdi-eye"></i>
 					</span>
-                    <input class="input100" type="password" name="password">
+                    <input class="input100" type="password" name="password" value="123qwe">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />

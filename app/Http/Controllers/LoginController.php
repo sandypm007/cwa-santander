@@ -60,11 +60,21 @@ class LoginController extends Controller
         }
 
         $credentials = $request->only(['email', 'password']);
-        $credentials['active'] = 1;
-        if (Auth::attempt($credentials)) {
-            return $this->responseSuccess();
+        /** @var User $user */
+        $user = User::where('email', $credentials['email'])->first();
+        if (!$user) {
+            return $this->responseFail(trans('messages.user.not_found'), [], 404);
         }
 
-        return $this->responseFail(trans('messages.user.not_login'));
+        if (!$user->active) {
+            return $this->responseFail(trans('messages.user.not_active'));
+        }
+
+        if (!app('hash')->check($credentials['password'], $user->password)) {
+            return $this->responseFail(trans('messages.access.password'));
+        }
+
+        Auth::login($user);
+        return $this->responseSuccess(null, ['continue_to' => route('homepage')]);
     }
 }
