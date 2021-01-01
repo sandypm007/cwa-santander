@@ -58,6 +58,13 @@ class ChatController extends Controller
                 ->first();
         }
 
+        usort($users, function ($a, $b) {
+            if ($a['last_message']['created_at'] < $b['last_message']['created_at']) {
+                return 1;
+            }
+            return -1;
+        });
+
         return $this->responseSuccess(null, ['to' => date('U'), 'entries' => $users]);
     }
 
