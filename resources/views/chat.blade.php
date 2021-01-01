@@ -30,6 +30,12 @@
                     <div class="inbox_chat" id="chat-users" data-from="0" data-sync="{{ route('chat_users') }}"></div>
                 </div>
                 <div class="mesgs">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h5 id="chat-username"></h5>
+                            <h6 id="chat-position"></h6>
+                        </div>
+                    </div>
                     <div class="msg_history" id="chat-screen" data-sync="{{ route('chat_messages') }}" data-from="0"></div>
                     <div class="type_msg">
                         <form name="messaging" action="{{ route('post_message') }}" action="#" method="post">

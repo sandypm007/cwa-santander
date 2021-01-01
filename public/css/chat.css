@@ -111,7 +111,7 @@ img {
 }
 
 .inbox_chat {
-    height: 550px;
+    height: 570px;
     overflow-y: scroll;
 }
 
@@ -149,7 +149,7 @@ img {
 
 .mesgs {
     float: left;
-    padding: 30px 15px 0 25px;
+    padding: 10px 15px 0 25px;
     width: 70%;
 }
 

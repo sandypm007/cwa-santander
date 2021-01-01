@@ -16,7 +16,7 @@
         }, 800);
     });
 
-    const chat_user = '<div class="chat_list" data-id="/id/" data-from="0"><div class="chat_people"><div class="chat_ib"><h5>/username/ <span class="chat_date">/date/</span></h5></div></div></div>';
+    const chat_user = '<div class="chat_list" data-id="/id/" data-region="/region/" data-position="/position/" data-department="/department/" data-username="/username/" data-from="0"><div class="chat_people"><div class="chat_ib"><h5>/username/ <span class="chat_date">/date/</span></h5></div></div></div>';
     $usersScreen.on('sync', function () {
         $.ajax({
             "async": true,
@@ -28,7 +28,11 @@
         }).done(function (data) {
             for (const i in data.entries) {
                 if ($usersScreen.find('[data-id="' + data.entries[i].id + '"]').length === 0) {
-                    let html = chat_user.replace(/\/id\//, data.entries[i].id).replace(/\/username\//, data.entries[i].fullname);
+                    let html = chat_user.replace(/\/id\//, data.entries[i].id)
+                        .replace(/\/username\//g, data.entries[i].fullname)
+                        .replace(/\/region\//g, data.entries[i].region ?? '')
+                        .replace(/\/position\//g, data.entries[i].position ?? '')
+                        .replace(/\/department\//g, data.entries[i].department ?? '');
                     let date = '-';
                     if (data.entries[i].last_message) {
                         date = data.entries[i].last_message.formatted_date;
@@ -102,9 +106,14 @@
     $(document.body).on('click', '.chat_list', function () {
         $(this).siblings().removeClass('active_chat');
         $(this).addClass('active_chat');
-        $chatScreen.data('from', $(this).data('from'));
+        $chatScreen.data('from', 0);
+        if ($(this).data('id') !== $chatScreen.data('target')) {
+            $chatScreen.html('');
+        }
         $chatScreen.data('target', $(this).data('id'));
         $form.find('input[name="target"]').val($(this).data('id'));
+        $('#chat-username').html($(this).data('username'));
+        $('#chat-position').html($(this).data('region') + " - " + $(this).data('department') + " - " + $(this).data('position'));
         $chatScreen.trigger('sync');
     });
 
