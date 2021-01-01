@@ -15,5 +15,6 @@ return [
     'template' => [
         'messaging' => 'Mensajería',
         'customers' => 'Clientes',
+        'configuration' => 'Configuración',
     ],
 ];

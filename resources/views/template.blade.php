@@ -43,16 +43,25 @@
                 <li class="nav-item"><a href="#new3" class="nav-link">Kick Off BEI 2021</a></li>
                 <li class="nav-item"><a href="#new4" class="nav-link">Contacto</a></li>
                 @if (auth()->user()->acl_level === 100)
-                    <li class="nav-item {{ request()->is('chat') ? 'active' : '' }}"><a href="{{ route('chat') }}" class="nav-link">Chat</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Administrar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-user">
+                            <a class="dropdown-item" href="{{ route('chat') }}">Chat</a>
+                            <a class="dropdown-item" href="{{ route('configuration') }}">Configuración</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Salir</a>
+                        </div>
+                    </li>
+                @else
+                    <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Salir</a></li>
                 @endif
-                <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Salir</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 @yield('content')
-
 
 <footer class="ftco-footer ftco-section">
     <div class="container">

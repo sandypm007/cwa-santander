@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Configuration;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -11,6 +12,6 @@ class HomeController extends Controller
      */
     public function index(): View
     {
-        return view('home');
+        return view('home', ['configuration' => Configuration::newOrFind()]);
     }
 }

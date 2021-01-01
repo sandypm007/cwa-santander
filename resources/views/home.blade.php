@@ -42,7 +42,7 @@
                                 <div class="text">
                                     <h1 class="mb-4">Click para comenzar</h1>
                                     <!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>-->
-                                    <p class="mb-0"><a href="https://vimeo.com/45830194" class="img-video popup-vimeo d-flex align-items-center justify-content-center">
+                                    <p class="mb-0"><a href="{{ $configuration->video_url }}" class="img-video popup-vimeo d-flex align-items-center justify-content-center">
                                             <span class="fa fa-play"></span>
                                         </a></p>
                                 </div>

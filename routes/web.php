@@ -23,6 +23,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/message', ['as' => 'read_messages', 'uses' => 'MessageController@list']);
     Route::post('/message', ['as' => 'send_message', 'uses' => 'MessageController@handle'])->withoutMiddleware(['csrf']);
 
+    Route::get('/configuration', ['as' => 'configuration', 'uses' => 'ConfigurationController@index']);
+    Route::post('/configuration', 'ConfigurationController@handle');
+
     Route::get('/chat', ['as' => 'chat', 'uses' => 'ChatController@index']);
     Route::get('/chat/users', ['as' => 'chat_users', 'uses' => 'ChatController@users']);
     Route::get('/chat/messages', ['as' => 'chat_messages', 'uses' => 'ChatController@messages']);
