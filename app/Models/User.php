@@ -11,6 +11,9 @@ use Illuminate\Notifications\Notifiable;
  * @package App\Models
  * @property integer $id
  * @property string $fullname
+ * @property string $region
+ * @property string $position
+ * @property string $department
  * @property string $email
  * @property string $password
  * @property integer $acl_level
@@ -30,7 +33,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'fullname', 'email', 'password', 'acl_level', 'active',
+        'fullname', 'region', 'position', 'department', 'email', 'password', 'acl_level', 'active',
     ];
 
     /**
