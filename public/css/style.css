@@ -11799,25 +11799,24 @@ h1, h2, h3, h4, h5,
     }
 }
 
-.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+.ftco-navbar-light .navbar-nav > .nav-item .nav-link {
     font-size: 13px;
-    padding-top: .9rem;
-    padding-bottom: .9rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: .9rem 20px;
     color: #000;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 1 !important;
+    background-color: transparent;
+    border-color: transparent;
 }
 
-.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+.ftco-navbar-light .navbar-nav > .nav-item .nav-link:hover {
     color: #ec0000;
 }
 
 @media (max-width: 991.98px) {
-    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    .ftco-navbar-light .navbar-nav > .nav-item .nav-link {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;

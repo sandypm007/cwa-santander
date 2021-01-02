@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', ['as' => 'login', 'uses' => 'LoginController@index']);
 Route::post('/login', ['as' => '_login', 'uses' => 'LoginController@login']);
-Route::get('/_logout', ['as' => 'logout', 'uses' => 'LoginController@logout']);
+Route::post('/_logout', ['as' => 'logout', 'uses' => 'LoginController@logout']);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', ['as' => 'homepage', 'uses' => 'HomeController@index']);

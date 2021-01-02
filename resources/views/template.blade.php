@@ -50,11 +50,19 @@
                         <div class="dropdown-menu" aria-labelledby="dropdown-user">
                             <a class="dropdown-item" href="{{ route('chat') }}">Chat</a>
                             <a class="dropdown-item" href="{{ route('configuration') }}">Configuración</a>
-                            <a class="dropdown-item" href="{{ route('logout') }}">Salir</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="dropdown-item" type="submit">Salir</button>
+                            </form>
                         </div>
                     </li>
                 @else
-                    <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Salir</a></li>
+                    <li class="nav-item">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="nav-link" type="submit">Salir</button>
+                        </form>
+                    </li>
                 @endif
             </ul>
         </div>
