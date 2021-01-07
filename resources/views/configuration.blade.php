@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5 pt-5">
         <h3 class="text-center">{{ trans('messages.template.configuration') }}</h3>
         @if ($errors->any())
             <div class="row mt-5">

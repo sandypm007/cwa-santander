@@ -6,52 +6,22 @@
 
 @section('content')
     <div class="nomove">
-        <section class="hero-wrap degree-right js-fullheight" id="new">
-            <div class="home-slider js-fullheight owl-carousel">
-            <!-- <div class="slider-item js-fullheight" style="background-image:url('{{ url('public/images/bg_1.jpg') }});">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row no-gutters slider-text js-fullheight align-items-center">
-                        <div class="col-md-12 ftco-animate">
-                            <div class="absolute">
-                                <h4 class="number" data-number="400">0</h4>
-                                <p>Más de 100,000 cuentahabientes</p>
-                            </div>
-                            <div class="text">
-                                <h1 class="mb-4">conecta2 &amp; Kick-Off BEI 2021</h1>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                                <p class="mb-0"><a href="#" class="btn btn-primary py-md-3 py-2 px-2 px-md-4">Start Project</a></p>
-                            </div>
-                        </div>
-                        <a href="https://vimeo.com/45830194" class="img-video popup-vimeo d-flex align-items-center justify-content-center">
-                            <span class="fa fa-play"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>-->
+        <section class="hero-wrap degree-right js-fullheight" id="new" style="height: 949px;">
+            <div class="fondo">
+                <div class="slider-item js-fullheight" style="height: 949px;">
 
-                <div class="slider-item js-fullheight" style="background-image:url('{{ url('public/images/bg_2.jpg') }}');">
-                    <!--<div class="overlay"></div>-->
-                    <div class="container">
-                        <div class="row no-gutters slider-text js-fullheight align-items-center">
-                            <div class="col-md-12 ftco-animate">
-                                <!--<div class="absolute">
-                                    <h4 class="number" data-number="21">0</h4>
-                                    <p>Years of Experienced</p>
-                                </div>-->
-                                <div class="text">
-                                    <h1 class="mb-4">Click para comenzar</h1>
-                                    <!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>-->
-                                    <p class="mb-0"><a href="{{ $configuration->video_url }}" class="img-video popup-vimeo d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-play"></span>
-                                        </a></p>
-                                </div>
+                    <div class="row no-gutters slider-text js-fullheight align-items-center" style="height: 949px;">
+                        <div class="col-md-12 ftco-animate fadeInUp ftco-animated">
+                            <div class="text aliniacion">
+                                <h1 class="mb-4 edittext">Click para ver el evento</h1>
+                                <!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>-->
+                                <p class="mb-0"><a href="{{ $configuration->video_url }}" class="playbutton img-video popup-vimeo d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-play" style="color: black;" aria-hidden="true"></span>
+                                    </a></p>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </div>
@@ -60,6 +30,14 @@
             <div class="row justify-content-center no-gutters">
                 <div class="col-md-12 heading-section text-center ftco-animate mb-5">
                     <h2 class="mb-2">About us</h2>
+                </div>
+            </div>
+            <div class="col-md d-flex align-items-stretch ftco-animate fadeInUp ftco-animated">
+                <div class="media block-6 w-100 services d-block text-left">
+                    <div class="media-body py-md-3">
+                        <h1 class="mb-2 nameuser">Usuario</h1>
+                        <h2 class="mb-2 welcomeuser">Bienvenido al Kick Off 2021: <?= auth()->user()->fullname; ?></h2>
+                    </div>
                 </div>
             </div>
             <!--
