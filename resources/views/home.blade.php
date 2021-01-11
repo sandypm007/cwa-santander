@@ -25,31 +25,25 @@
             </div>
         </section>
     </div>
-    <section class="ftco-section" id="new1">
+
+    <section class="ftco-section animated fadeInDown" id="new1">
         <div class="container">
             <div class="row justify-content-center no-gutters">
                 <div class="col-md-12 heading-section text-center ftco-animate mb-5">
                     <h2 class="mb-2">About us</h2>
                 </div>
             </div>
-            <div class="col-md d-flex align-items-stretch ftco-animate fadeInUp ftco-animated">
-                <div class="media block-6 w-100 services d-block text-left">
-                    <div class="media-body py-md-3">
-                        <h1 class="mb-2 nameuser">Usuario</h1>
-                        <h2 class="mb-2 welcomeuser">Bienvenido al Kick Off 2021: <?= auth()->user()->fullname; ?></h2>
-                    </div>
-                </div>
-            </div>
-            <!--
+
             <div class="row">
                 <div class="col-md d-flex align-items-stretch ftco-animate">
-                    <div class="media block-6 w-100 services d-block text-center">
-                        <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-vector"></span></div>
-                        <div class="media-body py-md-4">
-                            <h3>UI/UX Design</h3>
+                    <div class="media block-6 w-100 services d-block text-left">
+                        <div class="media-body py-md-3">
+                            <h1 class="mb-2 nameuser">Usuario</h1>
+                            <h2 class="mb-2 welcomeuser">Bienvenido al Kick Off 2021:</h2>
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="col-md d-flex align-items-stretch ftco-animate">
                     <div class="media block-6 w-100 services d-block text-center">
                         <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-web-programming"></span></div>
@@ -83,270 +77,31 @@
                     </div>
                 </div>
             </div>-->
-            <div class="row wrap-about my-5">
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-6 order-md-last ftco-animate d-flex">
-                            <div class="img w-100" style="background-image: url('{{ url('public/images/about.jpg') }}');"></div>
-                        </div>
-                        <div class="col-md-6 ftco-animate">
-                            <div class="text text-md-right">
-                                <h3>Welcome to AVO A Personal Porfolio Web Agency</h3>
-                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                                    into
-                                    your mouth.</p>
+                <div class="row wrap-about my-5">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6 order-md-last ftco-animate d-flex">
+                                <div class="img w-100" style="background-image: url(<?= url('public/images/about.jpg') ?>);"></div>
+                            </div>
+                            <div class="col-md-6 ftco-animate">
+                                <div class="text text-md-right">
+                                    <h3>Welcome to AVO A Personal Porfolio Web Agency</h3>
+                                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="text">
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and
-                            supplies
-                            it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <!--<p><a href="#" class="btn btn-primary">View all projects</a></p>-->
+                    <div class="col-md-4 ftco-animate">
+                        <div class="text">
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <!--<p><a href="#" class="btn btn-primary">View all projects</a></p>-->
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--<div class="row mt-5">
-                <div class="col-md-4">
-                    <div class="services-2 d-flex ftco-animate">
-                        <span>01</span>
-                        <div class="text">
-                            <h3>Search Engine Optimization</h3>
-                            <p>Far far away, behind the word mountains</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="services-2 d-flex ftco-animate">
-                        <span>02</span>
-                        <div class="text">
-                            <h3>Search Engine Optimization</h3>
-                            <p>Far far away, behind the word mountains</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="services-2 d-flex ftco-animate">
-                        <span>03</span>
-                        <div class="text">
-                            <h3>Search Engine Optimization</h3>
-                            <p>Far far away, behind the word mountains</p>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-
-
         </div>
     </section>
-    <!--
-        <section class="ftco-section ftco-portfolio bg-light">
-            <div class="row justify-content-center no-gutters">
-                <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-                    <h2 class="mb-2">Our Works</h2>
-                </div>
-            </div>
 
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-md-12 portfolio-wrap mt-0">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 img" style="background-image: url(images/work-1.jpg);">
-
-                            </div>
-                            <div class="col-md-7">
-                                <div class="text pt-5 pl-0 pl-lg-5 pl-md-4 ftco-animate">
-                                    <div class="px-4 px-lg-4">
-                                        <div class="desc">
-                                            <div class="top">
-                                                <span class="subheading">Web Design</span>
-                                                <h2 class="mb-2"><a href="work.html">Cassette tape</a></h2>
-                                            </div>
-                                            <div class="absolute">
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                                <div class="icon d-flex align-items-center mb-4">
-                                                    <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-                                                    <div class="position pl-3">
-                                                        <h4 class="mb-0">Jamie Jonson</h4>
-                                                        <span>avo.com</span>
-                                                    </div>
-                                                </div>
-                                                <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12 portfolio-wrap">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 order-md-last img" style="background-image: url(images/work-2.jpg);">
-
-                            </div>
-                            <div class="col-md-7">
-                                <div class="text pt-5 pr-md-5 ftco-animate">
-                                    <div class="px-4 px-lg-4">
-                                        <div class="desc text-md-right">
-                                            <div class="top">
-                                                <span class="subheading">Application</span>
-                                                <h2 class="mb-2"><a href="work.html">Miniwall Clock</a></h2>
-                                            </div>
-                                            <div class="absolute">
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                                <div class="d-flex w-100">
-                                                    <div class="icon d-flex align-items-center ml-md-auto mb-4">
-                                                        <div class="img" style="background-image: url(images/person_2.jpg);"></div>
-                                                        <div class="position pl-3 text-left">
-                                                            <h4 class="mb-0">Jamie Jonson</h4>
-                                                            <span>avo.com</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12 portfolio-wrap">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 img" style="background-image: url(images/work-3.jpg);">
-
-                            </div>
-                            <div class="col-md-7">
-                                <div class="text pt-5 pl-md-5 pl-md-4 ftco-animate">
-                                    <div class="px-4 px-lg-4">
-                                        <div class="desc">
-                                            <div class="top">
-                                                <span class="subheading">UI/UX Design</span>
-                                                <h2 class="mb-2"><a href="work.html">Avo Portfolio Agency</a></h2>
-                                            </div>
-                                            <div class="absolute">
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                                <div class="icon d-flex align-items-center mb-4">
-                                                    <div class="img" style="background-image: url(images/person_3.jpg);"></div>
-                                                    <div class="position pl-3">
-                                                        <h4 class="mb-0">Jamie Jonson</h4>
-                                                        <span>avo.com</span>
-                                                    </div>
-                                                </div>
-                                                <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12 portfolio-wrap">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 order-md-last img" style="background-image: url(images/work-4.jpg);">
-
-                            </div>
-                            <div class="col-md-7">
-                                <div class="text pt-5 pr-md-5 ftco-animate">
-                                    <div class="px-4 px-lg-4">
-                                        <div class="desc text-md-right">
-                                            <div class="top">
-                                                <span class="subheading">Web Development</span>
-                                                <h2 class="mb-2"><a href="work.html">Hand Writing</a></h2>
-                                            </div>
-                                            <div class="absolute">
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                                <div class="d-flex w-100">
-                                                    <div class="icon d-flex align-items-center ml-md-auto mb-4">
-                                                        <div class="img" style="background-image: url(images/person_2.jpg);"></div>
-                                                        <div class="position pl-3 text-left">
-                                                            <h4 class="mb-0">Jamie Jonson</h4>
-                                                            <span>avo.com</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12 portfolio-wrap">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 img" style="background-image: url(images/work-5.jpg);">
-
-                            </div>
-                            <div class="col-md-7">
-                                <div class="text pt-5 pl-md-5 pl-md-4 ftco-animate">
-                                    <div class="px-4 px-lg-4">
-                                        <div class="desc">
-                                            <div class="top">
-                                                <span class="subheading">Illustration</span>
-                                                <h2 class="mb-2"><a href="work.html">Keyboard</a></h2>
-                                            </div>
-                                            <div class="absolute">
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                                <div class="icon d-flex align-items-center mb-4">
-                                                    <div class="img" style="background-image: url(images/person_2.jpg);"></div>
-                                                    <div class="position pl-3">
-                                                        <h4 class="mb-0">Jamie Jonson</h4>
-                                                        <span>avo.com</span>
-                                                    </div>
-                                                </div>
-                                                <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12 portfolio-wrap">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 order-md-last img" style="background-image: url(images/work-6.jpg);">
-
-                            </div>
-                            <div class="col-md-7">
-                                <div class="text pt-5 pr-md-5 ftco-animate">
-                                    <div class="px-4 px-lg-4">
-                                        <div class="desc text-md-right">
-                                            <div class="top">
-                                                <span class="subheading">Web Development</span>
-                                                <h2 class="mb-2"><a href="work.html">Spiral</a></h2>
-                                            </div>
-                                            <div class="absolute">
-                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                                <div class="d-flex w-100">
-                                                    <div class="icon d-flex align-items-center ml-md-auto mb-4">
-                                                        <div class="img" style="background-image: url(images/person_2.jpg);"></div>
-                                                        <div class="position pl-3 text-left">
-                                                            <h4 class="mb-0">Jamie Jonson</h4>
-                                                            <span>avo.com</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="degree-left"></div>
-        </section>
-    -->
     <section class="ftco-section testimony-section" id="new2">
         <div class="container">
             <div class="row justify-content-center mb-5">
@@ -363,7 +118,7 @@
                                     <span class="fa fa-quote-left"></span>
                                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url('{{ url('public/images/person_1.jpg') }}')"></div>
+                                        <div class="user-img" style="background-image: url(<?= url('public/images/person_1.jpg') ?>)"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -378,7 +133,7 @@
                                     <span class="fa fa-quote-left"></span>
                                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url('{{ url('public/images/person_2.jpg') }}')"></div>
+                                        <div class="user-img" style="background-image: url(<?= url('public/images/person_2.jpg') ?>)"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -393,7 +148,7 @@
                                     <span class="fa fa-quote-left"></span>
                                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url('{{ url('public/images/person_3.jpg') }}')"></div>
+                                        <div class="user-img" style="background-image: url(<?= url('public/images/person_3.jpg') ?>)"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -408,7 +163,7 @@
                                     <span class="fa fa-quote-left"></span>
                                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url('{{ url('public/images/person_1.jpg') }}')"></div>
+                                        <div class="user-img" style="background-image: url(<?= url('public/images/person_1.jpg') ?>)"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -423,7 +178,7 @@
                                     <span class="fa fa-quote-left"></span>
                                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url('{{ url('public/images/person_2.jpg') }}')"></div>
+                                        <div class="user-img" style="background-image: url(<?= url('public/images/person_2.jpg') ?>)"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -436,9 +191,9 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <!--<div class="row mt-5">
                 <div class="col-md-12">
-                    <div class="intro p-md-4 py-md-5 p-2 rounded img" style="background-image: url('{{ url('public/images/bg_1.jpg') }}');">
+                    <div class="intro p-md-4 py-md-5 p-2 rounded img" style="background-image: url(images/bg_1.jpg);">
                         <div class="col-md-6 ftco-animate">
                             <span>Get Started</span>
                             <h2>Fill in the brief and get the project estimate</h2>
@@ -447,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
 
@@ -458,68 +213,220 @@
                     <h2>Kick Off BEI 2021</h2>
                 </div>
             </div>
-        <!--<div class="row d-flex">
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img" style="background-image: url('{{ url('public/images/image_1.jpg') }}');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+            <div class="timeline  ftco-animate">
+                <ul>
+                    <li>
+                        <div class="content">
+                            <h3>Bienvenida</h3>
+                            <p>Javier Rodriguez </p>
                         </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img" style="background-image: url('{{ url('public/images/image_2.jpg') }}');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        <div class="time">
+                            <h4>10:00</h4>
                         </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img" style="background-image: url('{{ url('public/images/image_3.jpg') }}');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Plática con Directores Regionales</h3>
+                            <p>Fernando Quesada</p>
                         </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img" style="background-image: url('{{ url('public/images/image_4.jpg') }}');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        <div class="time">
+                            <h4>10:15</h4>
                         </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                    </div>
-                </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación DGA: Resultados y Retos</h3>
+                            <p>Fernando Quesada  </p>
+                        </div>
+                        <div class="time">
+                            <h4>10:25</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Entorno Económico</h3>
+                            <p>Luis Flores</p>
+                        </div>
+                        <div class="time">
+                            <h4>11:28</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Captación y Seguros Emp.</h3>
+                            <p>Javier Rodriguez </p>
+                        </div>
+                        <div class="time">
+                            <h4>11:53</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Mensaje RRHH</h3>
+                            <p>Juan Ignacio Echeverría  </p>
+                        </div>
+                        <div class="time">
+                            <h4>11:58</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación ROF y Nómina</h3>
+                            <p>Iván Riva Palacio</p>
+                        </div>
+                        <div class="time">
+                            <h4>12:03</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Sol Financieras</h3>
+                            <p>Martin Villareal</p>
+                        </div>
+                        <div class="time">
+                            <h4>12:08</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Mensaje PyP</h3>
+                            <p>Pablo Elek  </p>
+                        </div>
+                        <div class="time">
+                            <h4>12:13</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Neg. Int y Agro</h3>
+                            <p>Rodolfo Hernandez Sada </p>
+                        </div>
+                        <div class="time">
+                            <h4>12:18</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Banca Transaccional</h3>
+                            <p>Marcos Abal  </p>
+                        </div>
+                        <div class="time">
+                            <h4>12:23</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Plática entre DGA´s</h3>
+                            <p>Fernando Quesada y Ricardo Alonso </p>
+                        </div>
+                        <div class="time">
+                            <h4>12:28</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Arrendadora</h3>
+                            <p>Michael Goeters </p>
+                        </div>
+                        <div class="time">
+                            <h4>12:48</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Inst. y SP.</h3>
+                            <p>Pilar Herrera </p>
+                        </div>
+                        <div class="time">
+                            <h4>12:53</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Mensaje CFO</h3>
+                            <p>Didier Mena </p>
+                        </div>
+                        <div class="time">
+                            <h4>12:58</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Large Corporate</h3>
+                            <p>Arturo Basagoiti</p>
+                        </div>
+                        <div class="time">
+                            <h4>13:03</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Presentación Segmento Empresas</h3>
+                            <p>Javier Rodriguez </p>
+                        </div>
+                        <div class="time">
+                            <h4>13:08</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Mensaje CIB</h3>
+                            <p>Octavio Couttolenc</p>
+                        </div>
+                        <div class="time">
+                            <h4>13:13</h4>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="content">
+                            <h3>Mensaje presidencia y DGA</h3>
+                            <p>Héctor Grisi y Fernando Quesada </p>
+                        </div>
+                        <div class="time">
+                            <h4>13:20</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Reconocimientos</h3>
+                            <p>Fernando Quesada</p>
+                        </div>
+                        <div class="time">
+                            <h4>14:10</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Cierre</h3>
+                            <p></p>
+                        </div>
+                        <div class="time">
+                            <h4>14:50</h4>
+                        </div>
+                    </li>
+                    <div style="clear:both;"></div>
+                </ul>
             </div>
-        </div>-->
         </div>
         <div class="degree-left-footer"></div>
     </section>
