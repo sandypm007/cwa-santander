@@ -235,10 +235,10 @@
 
     $('.popup-youtube, .popup-vimeo, .popup-gmaps').click(function (evt) {
         evt.preventDefault();
+
     });
 
     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-        disableOn: 700,
         type: 'iframe',
         mainClass: 'mfp-fade',
         removalDelay: 160,

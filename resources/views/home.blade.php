@@ -5,7 +5,7 @@
 {{--@endsection--}}
 
 @section('javascripts')
-    <script src="{{ url('public/js/main.v1.js') }}"></script>
+    <script src="{{ url('public/js/main.v2.js') }}"></script>
 @endsection
 
 @section('content')
