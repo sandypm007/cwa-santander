@@ -25,23 +25,21 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light animate__animated animate__fadeInDown {{ !request()->is('/') ? 'scrolled awake' : '' }}" id="ftco-navbar">
     <div class="container">
-        <!--Logo that is shown on the banner
-        <img src="images/Santanderrojo.svg" class="banner-logo" alt="Landing Page">-->
+        <!--Logo that is shown on the banner-->
+        <img src="<?= url('public/images/santanderrojo.svg') ?>" class="banner-logo" alt="Landing Page">
         <!--End of Banner Logo-->
         <!--<a class="navbar-brand" href="index.html">a<span>v</span>o</a>-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars" aria-hidden="true"></i>
+            <i class="fas fa-bars"></i>
             <!--<span class="oi oi-menu"></span> Menu-->
         </button>
-
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="{{ request()->is('/') ? '#new' : route('homepage') }}" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#new1" class="nav-link">Evento</a></li>
-                <li class="nav-item"><a href="#new2" class="nav-link">Presentadores</a></li>
-                <li class="nav-item"><a href="#new3" class="nav-link">Kick Off BEI 2021</a></li>
-                <li class="nav-item"><a href="#new4" class="nav-link">Contacto</a></li>
+                <li class="nav-item"><a href="#new1" class="nav-link">Bienvenida</a></li>
+                <li class="nav-item"><a href="#speakers" class="nav-link">Presentadores</a></li>
+                <li class="nav-item"><a href="#new3" class="nav-link">Agenda</a></li>
                 @if (auth()->user()->acl_level === 100)
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

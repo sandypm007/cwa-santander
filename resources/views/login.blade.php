@@ -17,27 +17,28 @@
     <link rel="stylesheet" type="text/css" href="{{ url('public/css/main.css') }}">
 </head>
 <body>
-
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form method="post" action="{{ route('_login') }}" class="alogin100-form">
-				<span class="login100-form-title p-b-90">
-					<i class=""> <img src="{{ url('public/images/Santanderrojo.svg') }}" alt=""></i>
-				</span>
+            <form method="post" action="{{ route('_login') }}" class="login100-form">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
+					<span class="login100-form-title p-b-90">
+						<i class=""> <img src="{{ url('public/images/Santanderrojo.svg') }}" alt=""></i>
+					</span>
+
                 <div class="wrap-input100 validate-input" data-validate="Ingresar correo valido">
                     <input class="input100" type="text" name="email" value="">
                     <span class="focus-input100" data-placeholder="Email"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Ingresar una contraseña">
-					<span class="btn-show-pass">
-						<i class="zmdi zmdi-eye"></i>
-					</span>
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
                     <input class="input100" type="password" name="password" value="">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
-                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
@@ -45,6 +46,12 @@
                             <span class="bob">Login</span>
                         </button>
                     </div>
+                </div>
+
+                <div class="text-center p-t-30">
+                    <a class="txt2" href="https://api.whatsapp.com/send?phone=5215562329209&text=" target="_target">
+                        ¿Necesitas ayuda?
+                    </a>
                 </div>
             </form>
         </div>
