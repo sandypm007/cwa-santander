@@ -211,6 +211,14 @@
     };
     contentWayPoint();
 
+    $.magnificPopup.instance._onFocusIn = function(e) {
+        // Do nothing if target element is select2 input
+        if( $(e.target).is('input') ) {
+            return true;
+        }
+        // Else call parent method
+        $.magnificPopup.proto._onFocusIn.call(this,e);
+    };
 
     // magnific popup
     $('.image-popup').magnificPopup({

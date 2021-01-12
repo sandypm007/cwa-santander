@@ -57,7 +57,7 @@ class Controller extends BaseController
     {
         $errors = ['success' => false, 'errors' => []];
         foreach ($data->getMessages() as $field => $message) {
-            $errors['errors'][$field] = trim(join($message, '. '));
+            $errors['errors'][$field] = trim(join('. ', $message));
         }
 
         return response()->json($errors, 422);
