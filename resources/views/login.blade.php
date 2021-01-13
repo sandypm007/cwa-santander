@@ -22,7 +22,7 @@
         <div class="wrap-login100">
             <form method="post" action="{{ route('_login') }}" class="login100-form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
-					<span class="login100-form-title p-b-90">
+                <span class="login100-form-title p-b-90">
 						<i class=""> <img src="{{ url('public/images/Santanderrojo.svg') }}" alt=""></i>
 					</span>
 

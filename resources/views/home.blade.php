@@ -1,9 +1,5 @@
 @extends('template')
 
-{{--@section('css')--}}
-{{--    <link rel="stylesheet" href="{{ url('public/css/agenda.scss') }}">--}}
-{{--@endsection--}}
-
 @section('javascripts')
     <script src="{{ url('public/js/main.v2.js') }}"></script>
 @endsection
