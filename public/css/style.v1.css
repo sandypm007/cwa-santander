@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   /*margin-top: 0;
-  margin-bottom: 1rem;*/ 
+  margin-bottom: 1rem;*/
   margin: 0px;
 }
 
@@ -10217,7 +10217,7 @@ textarea.form-control {
 .btn-opc:hover{
   transform: scale(1.1);
   border-color: rgba(0, 0, 0, 0.1);
- 
+
 }
 .btn-opc2{
   width: 50px;
@@ -10241,7 +10241,7 @@ textarea.form-control {
 .btn-opc2:hover{
   transform: scale(1.1);
   border-color: rgba(0, 0, 0, 0.1);
- 
+
 }
 
 .img-opc{
@@ -10310,7 +10310,7 @@ textarea.form-control {
     margin-left: 0px;*/
     margin-top: 45px;
   }
-  
+
 }
 @media (max-width: 500px) {
   .aliniacion{
@@ -10318,7 +10318,7 @@ textarea.form-control {
     margin-left: 0px;*/
     margin-top: 135px;
   }
-  .edittext{    
+  .edittext{
     font-size: 22px;
     text-transform: uppercase;
     color: #fff;
@@ -10333,7 +10333,7 @@ textarea.form-control {
   .nameuser{
     font-size: 30px;
   }
-  
+
 }
 /*Estilos Agenda*/
 
@@ -10701,6 +10701,197 @@ textarea.form-control {
     width: 130px;
   }
   .descripcionuser {
-    font-size: 12px;  
+    font-size: 12px;
   }
+}
+
+/*--------------------------------------------------------------
+# Chat Window
+--------------------------------------------------------------*/
+
+.chat-popup,
+.response-popup {
+    position: fixed;
+    bottom: 120px;
+    right: 15px;
+    border: 3px solid #3b3c3e;
+    z-index: 9999991;
+    background-color: #3b3c3e;
+    width: 400px;
+    max-width: 90%;
+    padding: 10px;
+    min-width: 40px;
+    display: none;
+    border-radius: 6px;
+    margin: 20px;
+}
+
+.chat-popup {
+    padding-top: 40px;
+}
+
+.chat-popup .close {
+    margin-top: -40px;
+}
+
+.chat-popup .form-container {
+    background-color: #3b3c3e;
+}
+
+.chat-popup .form-container textarea,
+.chat-popup .form-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ffffff;
+    resize: none;
+    color: #000000;
+}
+
+.chat-popup .form-container label {
+    color: white;
+}
+
+.chat-popup .form-container textarea {
+    min-height: 150px;
+}
+
+.chat-popup .form-container input:focus,
+.chat-popup .form-container textarea:focus {
+    outline: none;
+}
+
+.chat-popup .form-container .btn {
+    background-color: #f34423;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+    opacity: 0.8;
+}
+
+.chat-popup .form-container .btn + .btn {
+    margin-left: 10%;
+}
+
+.chat-popup .form-container .cancel {
+    background-color: red;
+}
+
+.chat-popup .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.chat-popup .chat-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat-popup .chat-message {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    float: left;
+    clear: both;
+    width: 95%;
+    background-color: #ddd;
+    border: 2px solid #dedede;
+    color: #000000;
+}
+
+.chat-popup .chat-container .mine {
+    border: 2px solid #f34423;
+    background-color: #f34423;
+    margin-left: 5%;
+    width: 93%;
+    color: white;
+}
+
+.chat-popup .chat-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat-popup .chat-container .time-right {
+    float: right;
+    color: #aaa;
+}
+
+.chat-popup .chat-container .time-left {
+    float: left;
+    color: #999;
+}
+
+.chat-popup .chat-control input {
+    width: 85%;
+    float: left;
+}
+
+.chat-popup .chat-control button.btn {
+    width: 15% !important;
+    float: left;
+    padding: 6px;
+    font-size: 1.5em;
+}
+
+.response-popup {
+    width: 350px;
+    padding: 10px 20px;
+}
+
+.response-popup h4 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.response-popup .response-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 1.4em;
+}
+
+.response-popup .response-row > div:first-child {
+    width: 50px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.response-popup .response-row > div {
+    width: 100%;
+    text-align: center;
+}
+
+.response-popup .response-row > div .btn {
+    border-radius: 50%;
+    color: white;
+    padding: 0.375rem 0.9rem;
+    font-size: 1.1rem;
+    background-color: #f34623a6;
+    border-color: #f34623a6;
+}
+
+.response-popup .response-row > div .btn:hover,
+.response-popup .response-row > div .btn[data-mark="1"] {
+    background-color: #f34623;
+}
+
+.response-popup .btn {
+    border-radius: 5px;
+    color: white;
+    padding: 0.375rem 0.9rem;
+    font-size: 1.1rem;
+    background-color: #f34423;
+    border-color: #f34423;
+}
+
+.speaker > img {
+    filter: grayscale(100%);
 }

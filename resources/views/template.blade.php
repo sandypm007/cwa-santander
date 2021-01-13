@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="{{ url('public/css/magnific-popup.css') }}">
 
     <link rel="stylesheet" href="{{ url('public/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ url('public/css/style.css') }}">
-    <link rel="stylesheet" href="{{ url('public/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/style.v1.css') }}">
     @yield('css')
     <script src="https://kit.fontawesome.com/f8cbe70404.js" crossorigin="anonymous"></script>
 </head>

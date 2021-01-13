@@ -39,6 +39,10 @@
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
 
+                <div class="text-uppercase text-center" style="font-size: 0.8rem;">
+                    Toda la información transmitida en este evento es estrictamente confidencial.
+                </div>
+
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
