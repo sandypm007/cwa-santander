@@ -23,8 +23,8 @@
             <form method="post" action="{{ route('_login') }}" class="login100-form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                 <span class="login100-form-title p-b-90">
-						<i class=""> <img src="{{ url('public/images/santander_empresas.svg') }}" alt=""></i>
-					</span>
+                    <i class=""> <img src="{{ url('public/images/santander_empresas.svg') }}" alt=""></i>
+                </span>
 
                 <div class="wrap-input100 validate-input" data-validate="Ingresar correo valido">
                     <input class="input100" type="text" name="email" value="">

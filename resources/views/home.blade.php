@@ -481,7 +481,7 @@
                     <li>
                         <div class="content">
                             <h3>Mensaje CIB</h3>
-                            <p>Octavio Couttolenc</p>
+                            <p>Octaviano Couttolenc</p>
                         </div>
                         <div class="time">
                             <h4>13:30</h4>

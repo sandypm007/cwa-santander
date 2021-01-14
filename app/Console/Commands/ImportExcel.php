@@ -50,7 +50,7 @@ class ImportExcel extends Command
         $reader->setReadDataOnly(true);
         $spreadsheet = $reader->load($path);
         $sheet = $spreadsheet->getActiveSheet();
-        for ($i = 2; $i <= 1052; $i++) {
+        for ($i = 2; $i <= 1053; $i++) {
             $region = $sheet->getCell("A{$i}")->getValue();
             $name = mb_convert_case($sheet->getCell("B{$i}")->getValue(), MB_CASE_TITLE);
             $position = $sheet->getCell("C{$i}")->getValue();
