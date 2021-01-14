@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('public/vendor/select2/select2.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('public/vendor/daterangepicker/daterangepicker.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('public/css/util.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('public/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('public/css/main.v1.css') }}">
 </head>
 <body>
 <div class="limiter">
@@ -55,6 +55,9 @@
                 <div class="text-center p-t-30">
                     <a class="txt2" href="https://api.whatsapp.com/send?phone=5215562329209&text=" target="_target">
                         ¿Necesitas ayuda?
+                    </a><br>
+                    <a class="txt2" href="https://api.whatsapp.com/send?phone=5215562329209&text=" target="_target">
+                        Envía un WhatsApp al +55 62 32 92 09
                     </a>
                 </div>
             </form>

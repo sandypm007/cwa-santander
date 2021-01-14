@@ -50,12 +50,16 @@ class ImportExcel extends Command
         $reader->setReadDataOnly(true);
         $spreadsheet = $reader->load($path);
         $sheet = $spreadsheet->getActiveSheet();
-        for ($i = 2; $i <= 995; $i++) {
+        for ($i = 2; $i <= 1052; $i++) {
             $region = $sheet->getCell("A{$i}")->getValue();
             $name = mb_convert_case($sheet->getCell("B{$i}")->getValue(), MB_CASE_TITLE);
             $position = $sheet->getCell("C{$i}")->getValue();
             $department = $sheet->getCell("D{$i}")->getValue();
             $email = $sheet->getCell("E{$i}")->getValue();
+
+            if ($name === '') {
+                break;
+            }
 
             $user = User::where('email', $email)->first();
             if (!$user) {
