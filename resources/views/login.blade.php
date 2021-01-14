@@ -23,7 +23,7 @@
             <form method="post" action="{{ route('_login') }}" class="login100-form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                 <span class="login100-form-title p-b-90">
-						<i class=""> <img src="{{ url('public/images/Santanderrojo.svg') }}" alt=""></i>
+						<i class=""> <img src="{{ url('public/images/santander_empresas.svg') }}" alt=""></i>
 					</span>
 
                 <div class="wrap-input100 validate-input" data-validate="Ingresar correo valido">
@@ -64,7 +64,6 @@
         </div>
     </div>
 </div>
-
 <script src="{{ url('public/vendor/jquery/jquery-3.2.1.min.js')  }}"></script>
 <script src="{{ url('public/vendor/animsition/js/animsition.min.js')  }}"></script>
 <script src="{{ url('public/vendor/bootstrap/js/popper.js')  }}"></script>

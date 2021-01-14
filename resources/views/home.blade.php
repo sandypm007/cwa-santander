@@ -301,6 +301,15 @@
                 <ul>
                     <li>
                         <div class="content">
+                            <h3>Registro de Participantes</h3>
+                        </div>
+                        <div class="time">
+                            <h4>9:30</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
                             <h3>Bienvenida</h3>
                             <p>Javier Rodriguez </p>
                         </div>
@@ -315,17 +324,17 @@
                             <p>Fernando Quesada</p>
                         </div>
                         <div class="time">
-                            <h4>10:15</h4>
+                            <h4>10:05</h4>
                         </div>
                     </li>
 
                     <li>
                         <div class="content">
                             <h3>Presentación DGA: Resultados y Retos</h3>
-                            <p>Fernando Quesada </p>
+                            <p>Fernando Quesada  </p>
                         </div>
                         <div class="time">
-                            <h4>10:25</h4>
+                            <h4>10:30</h4>
                         </div>
                     </li>
 
@@ -335,7 +344,7 @@
                             <p>Luis Flores</p>
                         </div>
                         <div class="time">
-                            <h4>11:28</h4>
+                            <h4>11:20</h4>
                         </div>
                     </li>
 
@@ -345,17 +354,17 @@
                             <p>Javier Rodriguez </p>
                         </div>
                         <div class="time">
-                            <h4>11:53</h4>
+                            <h4>11:45</h4>
                         </div>
                     </li>
 
                     <li>
                         <div class="content">
                             <h3>Mensaje RRHH</h3>
-                            <p>Juan Ignacio Echeverría </p>
+                            <p>Juan Ignacio Echeverría  </p>
                         </div>
                         <div class="time">
-                            <h4>11:58</h4>
+                            <h4>11:55</h4>
                         </div>
                     </li>
 
@@ -365,7 +374,7 @@
                             <p>Iván Riva Palacio</p>
                         </div>
                         <div class="time">
-                            <h4>12:03</h4>
+                            <h4>12:00</h4>
                         </div>
                     </li>
 
@@ -375,17 +384,17 @@
                             <p>Martin Villareal</p>
                         </div>
                         <div class="time">
-                            <h4>12:08</h4>
+                            <h4>12:15</h4>
                         </div>
                     </li>
 
                     <li>
                         <div class="content">
                             <h3>Mensaje PyP</h3>
-                            <p>Pablo Elek </p>
+                            <p>Pablo Elek  </p>
                         </div>
                         <div class="time">
-                            <h4>12:13</h4>
+                            <h4>12:20</h4>
                         </div>
                     </li>
 
@@ -395,17 +404,17 @@
                             <p>Rodolfo Hernandez Sada </p>
                         </div>
                         <div class="time">
-                            <h4>12:18</h4>
+                            <h4>12:25</h4>
                         </div>
                     </li>
 
                     <li>
                         <div class="content">
                             <h3>Presentación Banca Transaccional</h3>
-                            <p>Marcos Abal </p>
+                            <p>Marcos Abal  </p>
                         </div>
                         <div class="time">
-                            <h4>12:23</h4>
+                            <h4>12:35</h4>
                         </div>
                     </li>
 
@@ -415,7 +424,7 @@
                             <p>Fernando Quesada y Ricardo Alonso </p>
                         </div>
                         <div class="time">
-                            <h4>12:28</h4>
+                            <h4>12:40</h4>
                         </div>
                     </li>
 
@@ -425,7 +434,7 @@
                             <p>Michael Goeters </p>
                         </div>
                         <div class="time">
-                            <h4>12:48</h4>
+                            <h4>12:55</h4>
                         </div>
                     </li>
 
@@ -435,7 +444,7 @@
                             <p>Pilar Herrera </p>
                         </div>
                         <div class="time">
-                            <h4>12:53</h4>
+                            <h4>13:00</h4>
                         </div>
                     </li>
 
@@ -445,17 +454,17 @@
                             <p>Didier Mena </p>
                         </div>
                         <div class="time">
-                            <h4>12:58</h4>
+                            <h4>13:05</h4>
                         </div>
                     </li>
 
                     <li>
                         <div class="content">
-                            <h3>Presentación Large Corporate</h3>
-                            <p>Arturo Basagoiti</p>
+                            <h3>Presentación Grandes Empresas</h3>
+                            <p>Antonio Basagoiti</p>
                         </div>
                         <div class="time">
-                            <h4>13:03</h4>
+                            <h4>13:15</h4>
                         </div>
                     </li>
 
@@ -465,7 +474,7 @@
                             <p>Javier Rodriguez </p>
                         </div>
                         <div class="time">
-                            <h4>13:08</h4>
+                            <h4>13:20</h4>
                         </div>
                     </li>
 
@@ -475,7 +484,7 @@
                             <p>Octavio Couttolenc</p>
                         </div>
                         <div class="time">
-                            <h4>13:13</h4>
+                            <h4>13:30</h4>
                         </div>
                     </li>
 
@@ -486,7 +495,7 @@
                             <p>Héctor Grisi y Fernando Quesada </p>
                         </div>
                         <div class="time">
-                            <h4>13:20</h4>
+                            <h4>13:35</h4>
                         </div>
                     </li>
 
@@ -496,85 +505,21 @@
                             <p>Fernando Quesada</p>
                         </div>
                         <div class="time">
-                            <h4>14:10</h4>
+                            <h4>13:50</h4>
                         </div>
                     </li>
                     <li>
                         <div class="content">
-                            <h3>Cierre</h3>
+                            <h3>Fin del evento </h3>
                             <p></p>
                         </div>
                         <div class="time">
-                            <h4>14:50</h4>
+                            <h4>14:00</h4>
                         </div>
                     </li>
-
-
                     <div style="clear:both;"></div>
                 </ul>
             </div>
-            <!--<div class="row d-flex">
-                <div class="col-md-3 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <div class="text">
-                            <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                            <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_1.jpg');">
-                            </a>
-                            <div class="meta mb-3">
-                                <div><a href="#">June 01, 2020</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                            </div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <div class="text">
-                            <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                            <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_2.jpg');">
-                            </a>
-                            <div class="meta mb-3">
-                                <div><a href="#">June 01, 2020</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                            </div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <div class="text">
-                            <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                            <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_3.jpg');">
-                            </a>
-                            <div class="meta mb-3">
-                                <div><a href="#">June 01, 2020</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                            </div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <div class="text">
-                            <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                            <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_4.jpg');">
-                            </a>
-                            <div class="meta mb-3">
-                                <div><a href="#">June 01, 2020</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                            </div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
         </div>
         <div class="degree-left-footer"></div>
     </section>
